@@ -121,7 +121,7 @@ public class Talker extends Startable {
 
         public StickCommand select(StickCommand command) {
             if (isDefault) {
-                return value + 0.05f > command.value ? this : command;
+                return value + 0.1f > command.value ? this : command;
             }
             return this.value > command.value ? this : command;
         }
@@ -132,7 +132,7 @@ public class Talker extends Startable {
         }
 
         public boolean isZero() {
-            return this.value < 0.01f;
+            return this.value < 0.1f;
         }
     }
 }
