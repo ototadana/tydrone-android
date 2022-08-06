@@ -61,16 +61,7 @@ public class Talker extends Startable {
 
         try {
             String[] s = message.split(" ");
-            StickCommand rx = new StickCommand(s[1], "left", "right", defaultMessage);
-            StickCommand ry = new StickCommand(s[2], "backward", "forward", defaultMessage);
             StickCommand lx = new StickCommand(s[3], "ccw", "cw", defaultMessage);
-            StickCommand ly = new StickCommand(s[4], "down", "up", defaultMessage);
-
-            StickCommand value = rx.select(ry.select(ly));
-            if (!value.isZero()) {
-                return value.toString();
-            }
-
             if (!lx.isZero()) {
                 return lx.toString();
             }
@@ -91,16 +82,10 @@ public class Talker extends Startable {
 
     private Map<String, Integer> createSoundMap(SoundPool soundPool) {
         Map<String, Integer> map = new HashMap<>();
-        map.put("back", soundPool.load(UnityPlayer.currentActivity, R.raw.back, 1));
         map.put("ccw", soundPool.load(UnityPlayer.currentActivity, R.raw.ccw, 1));
         map.put("cw", soundPool.load(UnityPlayer.currentActivity, R.raw.cw, 1));
-        map.put("down", soundPool.load(UnityPlayer.currentActivity, R.raw.down, 1));
         map.put("error", soundPool.load(UnityPlayer.currentActivity, R.raw.error, 1));
-        map.put("forward", soundPool.load(UnityPlayer.currentActivity, R.raw.forward, 1));
-        map.put("left", soundPool.load(UnityPlayer.currentActivity, R.raw.left, 1));
         map.put("ok", soundPool.load(UnityPlayer.currentActivity, R.raw.ok, 1));
-        map.put("right", soundPool.load(UnityPlayer.currentActivity, R.raw.right, 1));
-        map.put("up", soundPool.load(UnityPlayer.currentActivity, R.raw.up, 1));
         map.put("land", soundPool.load(UnityPlayer.currentActivity, R.raw.land, 1));
         map.put("takeoff", soundPool.load(UnityPlayer.currentActivity, R.raw.takeoff, 1));
         map.put("picture", soundPool.load(UnityPlayer.currentActivity, R.raw.picture, 1));
