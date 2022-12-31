@@ -8,22 +8,22 @@ devices.
 
 ## Requirement
 
-Android 10. This plugin has been tested only with Oculus Quest 2.
+Android 10. This plugin has been tested with Meta Quest 2 and Meta Quest Pro.
 
 ## Setup
 
-1. Download `tello-llp-wrapper-*.jar`
+1. Download `tello-llp-wrapper-1.1.1.jar`
    from [this page](https://github.com/ototadana/tello-llp-wrapper/releases).
-2. Copy `tello-llp-wrapper-*.jar` to the `./tydrone-android-plugin/libs` folder. If the folder does
-   not exist, create it.
-3. Download [javacv-platform-1.5.7-bin.zip](https://github.com/bytedeco/javacv/releases/tag/1.5.7)
+2. Copy `tello-llp-wrapper-1.1.1.jar` to the `./tydrone-android-plugin/libs` folder. If the folder
+   does not exist, create it.
+3. Download [javacv-platform-1.5.8-bin.zip](https://github.com/bytedeco/javacv/releases/tag/1.5.8)
 4. Create a small jar file using a script like the following:
    ```shell
    # unzip the downloaded file
-   unzip javacv-platform-1.5.7-bin.zip
+   unzip javacv-platform-1.5.8-bin.zip
 
    # cd to the destination folder of the zip file
-   cd javacv-platform-1.5.7-bin
+   cd javacv-platform-1.5.8-bin
 
    # create a working directory
    mkdir tmp
@@ -50,7 +50,7 @@ Android 10. This plugin has been tested only with Oculus Quest 2.
    rm -fr META-INF/native-image
    
    # create jar file
-   jar cf javacv-1.5.7.jar *
+   jar cf javacv-1.5.8.jar *
    ```
 5. Copy the created jar file to the `./tydrone-android-plugin/libs` folder.
 6. Copy `classes.jar` from Unity to the `./tydrone-android-plugin/dev-libs` folder.
