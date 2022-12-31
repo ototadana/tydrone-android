@@ -6,6 +6,7 @@ import com.xpfriend.tydrone.core.Logger;
 import com.xpfriend.tydrone.core.OutputStreamFactory;
 import com.xpfriend.tydrone.core.Startable;
 import com.xpfriend.tydrone.recorder.FFmpegVideoRecorder;
+import com.xpfriend.tydrone.sensor.DepthSensor;
 import com.xpfriend.tydrone.talker.Talker;
 import com.xpfriend.tydrone.telloio.ChannelReceiver;
 import com.xpfriend.tydrone.telloio.ChannelRequester;
@@ -51,6 +52,7 @@ public class AndroidStartableFactory {
         startables.add(new FFmpegVideoReceiver());
         startables.add(new Talker());
         startables.add(new FFmpegVideoRecorder(outputStreamFactory));
+        startables.add(new DepthSensor());
         return startables;
     }
 }

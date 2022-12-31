@@ -143,6 +143,17 @@ texture.Apply();
 See [README.md of the tello-llp-wrapper](https://github.com/ototadana/tello-llp-wrapper) for
 information on the use of other methods.
 
+
+### Depth Sensor
+#### Requirement
+- TensorFlow Lite
+  - image-1.0.0-beta1.aar
+  - tensorflow-lite-support-0.4.3.aar
+  - tensorflow-lite-2.11.0.aar
+  - tensorflow-lite-support-api-0.4.3.aar
+  - tensorflow-lite-api-2.11.0.aar
+- MiDaS model (int8[1, 256, 256, 3])
+
 ## License
 
 This software is released under the MIT License, see [LICENSE](./LICENSE).
