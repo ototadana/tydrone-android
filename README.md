@@ -12,9 +12,9 @@ Android 10. This plugin has been tested with Meta Quest 2 and Meta Quest Pro.
 
 ## Setup
 
-1. Download `tello-llp-wrapper-1.1.1.jar`
+1. Download `tello-llp-wrapper-1.1.2.jar`
    from [this page](https://github.com/ototadana/tello-llp-wrapper/releases).
-2. Copy `tello-llp-wrapper-1.1.1.jar` to the `./tydrone-android-plugin/libs` folder. If the folder
+2. Copy `tello-llp-wrapper-1.1.2.jar` to the `./tydrone-android-plugin/libs` folder. If the folder
    does not exist, create it.
 3. Download [javacv-platform-1.5.8-bin.zip](https://github.com/bytedeco/javacv/releases/tag/1.5.8)
 4. Create a small jar file using a script like the following:
